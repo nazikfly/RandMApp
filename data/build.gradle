@@ -1,0 +1,78 @@
+plugins {
+    id(Plugins.AGP.library)
+    id(Plugins.Kotlin.kotlin)
+    id(Plugins.Kotlin.kapt)
+}
+
+android {
+    compileSdk = AndroidConfig.compileSdk
+
+    defaultConfig {
+        minSdk = AndroidConfig.minSdk
+        targetSdk = AndroidConfig.targetSdk
+
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles ("consumer-rules.pro")
+    }
+
+    buildTypes {
+        release {
+            isMinifyEnabled = false
+            proguardFiles(
+                    getDefaultProguardFile("proguard-android-optimize.txt"),
+                    "proguard-rules.pro")
+        }
+    }
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+
+dependencies {
+
+    implementation(project(":domain"))
+
+    //UI
+    implementation (Dependencies.UI.core)
+    implementation(Dependencies.UI.appCompact)
+    implementation (Dependencies.UI.material)
+    testImplementation (Dependencies.UI.junit)
+    androidTestImplementation (Dependencies.UI.androidJunit)
+    androidTestImplementation (Dependencies.UI.espressoCore)
+    implementation (Dependencies.UI.fragment)
+
+    // Coroutines
+    implementation(Dependencies.Coroutines.android)
+    implementation(Dependencies.Coroutines.core)
+
+    //Navigation
+    implementation (Dependencies.Navigation.fragment)
+    implementation (Dependencies.Navigation.UI)
+
+
+    // Retrofit
+    implementation (Dependencies.Retrofit2.retrofit)
+    implementation (Dependencies.Retrofit2.retrofit2)
+    implementation (Dependencies.Okhttp3.okhttp)
+    implementation (Dependencies.Okhttp3.loggin)
+
+
+    //koin
+    implementation (Dependencies.Koil.koin)
+    implementation (Dependencies.Koil.scope)
+    implementation (Dependencies.Koil.viewmodel)
+    implementation (Dependencies.Koil.fragment)
+
+    //utils
+    implementation (Dependencies.Util.util)
+
+    //paging
+    implementation (Dependencies.Paging.paging)
+
+
+
+}

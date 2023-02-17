@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/HP/RandMApp/app/src/main/res/drawable-v24/ic_icon_filter.xml" value="0.153" />
+        <entry key="..\:/Users/HP/RandMApp/app/src/main/res/drawable-v24/ic_icon_search.xml" value="0.153" />
+        <entry key="..\:/Users/HP/RandMApp/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.153" />
+        <entry key="..\:/Users/HP/RandMApp/app/src/main/res/drawable/background_splash_screen.xml" value="0.153" />
+        <entry key="..\:/Users/HP/RandMApp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.153" />
+        <entry key="..\:/Users/HP/RandMApp/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/HP/RandMApp/app/src/main/res/layout/fragment_detail.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/HP/RandMApp/app/src/main/res/layout/fragment_filter.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/HP/RandMApp/app/src/main/res/layout/fragment_list.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/HP/RandMApp/app/src/main/res/layout/item_list.xml" value="0.17552083333333332" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_7" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

@@ -1,0 +1,96 @@
+plugins {
+    id(Plugins.AGP.application)
+    id(Plugins.Kotlin.kotlin)
+    id(Plugins.Kotlin.kapt)
+}
+
+android {
+    compileSdk =AndroidConfig.compileSdk
+
+    defaultConfig {
+        applicationId = "com.geektech.randmapp"
+        minSdk = AndroidConfig.minSdk
+        targetSdk = AndroidConfig.targetSdk
+        versionCode = 1
+        versionName = "1.0"
+
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            isMinifyEnabled = false
+            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"),
+                    "proguard-rules.pro")
+        }
+    }
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+    buildFeatures {
+        compose = true
+    }
+
+    dependencies {
+
+        implementation(project(":data"))
+              //Ui
+        implementation (Dependencies.UI.core)
+        implementation(Dependencies.UI.appCompact)
+        implementation (Dependencies.UI.material)
+        implementation (Dependencies.UI.constraintLayout)
+        testImplementation (Dependencies.UI.junit)
+        androidTestImplementation (Dependencies.UI.androidJunit)
+        androidTestImplementation (Dependencies.UI.espressoCore)
+        implementation (Dependencies.UI.fragment)
+        implementation (Dependencies.Ui.lifecycle)
+        implementation (Dependencies.UI.runtime)
+
+                // Compose dependencies
+        implementation (Dependencies.Compose.viewmodel)
+        implementation (Dependencies.Compose.compose)
+
+        implementation (Dependencies.Coil.coil)
+
+                // Coroutines
+        implementation(Dependencies.Coroutines.android)
+        implementation(Dependencies.Coroutines.core)
+
+               //Navigation
+        implementation (Dependencies.Navigation.fragment)
+        implementation (Dependencies.Navigation.UI)
+
+                  //Lifecycle
+        implementation (Dependencies.Lifecycle.viewModel)
+        implementation (Dependencies.Lifecycle.runtime)
+
+                   //ViewBindingDelegate
+        implementation (Dependencies.ViewBinding.delegate)
+
+                 // Retrofit
+        implementation (Dependencies.Retrofit2.retrofit)
+        implementation (Dependencies.Retrofit2.retrofit2)
+        implementation (Dependencies.Okhttp3.okhttp)
+        implementation (Dependencies.Okhttp3.loggin)
+
+        //ViewPager
+        implementation (Dependencies.viewpager2.viewpager2)
+
+         //koin
+        implementation (Dependencies.Koil.koin)
+        implementation (Dependencies.Koil.scope)
+        implementation (Dependencies.Koil.viewmodel)
+        implementation (Dependencies.Koil.fragment)
+
+        //utils
+        implementation (Dependencies.Util.util)
+
+        //paging
+        implementation (Dependencies.Paging.paging)
+
+    }
+}
